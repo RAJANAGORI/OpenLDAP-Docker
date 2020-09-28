@@ -6,10 +6,10 @@ services:
     command: --loglevel debug
     environment:
       LDAP_LOG_LEVEL: "256"
-      LDAP_ORGANISATION: "Habilelabs Pvt. Ltd."
-      LDAP_DOMAIN: "ldap.in.habilelabs.com"
+      LDAP_ORGANISATION: "Company Name"
+      LDAP_DOMAIN: "ldap.in.company-domain.com"
       LDAP_BASE_DN: ""
-      LDAP_ADMIN_PASSWORD: "admin@habilelabs"
+      LDAP_ADMIN_PASSWORD: "admin@company"
       LDAP_CONFIG_PASSWORD: "config"
       LDAP_READONLY_USER: "false"
       #LDAP_READONLY_USER_USERNAME: "readonly"
@@ -41,8 +41,6 @@ services:
     ports:
       - "389:389"
       - "636:636"
-#    domainname: "ldap.in.habilelabs.com" # important: same as hostname
-#    hostname: "ldap.in.habilelabs.com"
   phpldapadmin:
     image: osixia/phpldapadmin:latest
     container_name: phpldapadmin
